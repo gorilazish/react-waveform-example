@@ -1,7 +1,8 @@
-Example application of BBC's audio visualizer - https://github.com/bbc/peaks.js/tree/master
-Application generates fake names that are supposedly found in the given track and allows you to jump where that name is in the playback.
+Basic example of audio waveform implementation using React.  
+MP3 file is decoded to array, normalized and aggregated into bins.  
+Application generates fake events that supposedly happens during audio call.
 
-App is hosted on - https://peaks-visualizer.herokuapp.com/
+App is hosted on - https://react-waveform-example.herokuapp.com/
 
 Run:
 - clone
