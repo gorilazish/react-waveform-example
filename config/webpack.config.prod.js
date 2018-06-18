@@ -247,6 +247,14 @@ module.exports = {
           // Make sure to add the new loader(s) before the "file" loader.
         ],
       },
+      {
+        test: /\.scss$/,
+        loaders: [
+          require.resolve('style-loader'),      
+          require.resolve('css-loader'),      
+          require.resolve('sass-loader'),      
+        ]
+      },
     ],
   },
   plugins: [
