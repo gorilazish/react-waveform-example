@@ -1,0 +1,6 @@
+<!-- this SVG is the "clipping mask" - the waveform bars -->
+<svg height="0" width="0">
+    <defs>
+         <clipPath id="waveform-mask"></clipPath>
+    </defs>
+</svg>

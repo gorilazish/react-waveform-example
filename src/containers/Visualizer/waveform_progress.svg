@@ -1,0 +1,20 @@
+<svg
+    viewBox="0 0 100 100"
+    class="waveform-container"
+    preserveAspectRatio="none"
+>
+    <rect
+        class="waveform-bg"
+        x="0"
+        y="0"
+        height="100"
+        width="100"
+    />
+    <rect
+        class="waveform-progress"
+        x="0"
+        y="0"
+        height="100"
+        width=”0
+    />
+</svg>
