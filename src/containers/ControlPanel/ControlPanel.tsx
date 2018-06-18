@@ -7,6 +7,7 @@ import faker from 'faker'
 
 interface ControlPanelState {
   isPlaying: boolean
+  events: FakeEvent[]
 }
 
 interface FakeEvent {
@@ -16,11 +17,15 @@ interface FakeEvent {
 
 export default class ControlPanel extends React.Component<{}, ControlPanelState> {
   public state: ControlPanelState = {
-    isPlaying: false
+    isPlaying: false,
+    events: []
+  }
+
+  public componentDidMount() {
+    this.setState({ events: this.generateFakeTimelineEvents() })
   }
 
   public render() {
-    const fakeEvents = this.generateFakeTimelineEvents()
 
     return (
       <Flex
@@ -44,7 +49,7 @@ export default class ControlPanel extends React.Component<{}, ControlPanelState>
               padding: '10px',
               backgroundColor: '#fcfcfd'
             }}>
-            {fakeEvents.map(e => 
+            {this.state.events.map(e => 
               <div key={e.color + e.text} onClick={this.seekToFakePosition}>
                 <Timeline.Item
                   color={e.color}
